@@ -14,18 +14,17 @@ Curso sobre Kubernetes
     * [Instalación de minikube en linux + KVM](modulo2/instalacion-minikube-linux.md)
     * [Instalación y configuración de kubectl en linux](modulo2/instalacion-kubectl-linux.md)
     * [Despliegues de aplicaciones en Kubernetes](modulo2/despliegues-k8s.md)
-        * [Actividad 2.1: Instalación de minikube y kubectl (OBLIGATORIA)](modulo2/actividad1.md)
+
 1. Contenedores en Kubernetes: Pods
     * [Pod](modulo3/pods.md)
     * [Describiendo un Pod](modulo3/describiendo_pod.md)
 	* [Gestionando los Pods](modulo3/gestionando_pod.md)
-        * [Actividad 3.1: Trabajando con Pods (OBLIGATORIA)](modulo3/actividad1.md)
-        * [Actividad 3.2: Trabajando con un Pod multicontenedor (VOLUNTARIA)](modulo3/actividad2.md)
+
 1. Tolerancia y escalabilidad: ReplicaSets
 	* [ReplicaSet](modulo4/replicaset.md)
 	* [Describiendo un ReplicaSet](modulo4/describiendo_replicaset.md)
     * [Gestionando los ReplicaSet](modulo4/gestionando_replicaset.md)
-        * [Actividad 4.1: Trabajando con ReplicaSet (OBLIGATORIA)](modulo4/actividad1.md)
+
 1. Despliegues
     * [Deployment](modulo5/deployment.md)
     * [Describiendo un Deployment](modulo5/describiendo_deployment.md)

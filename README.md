@@ -2,7 +2,6 @@
 
 Curso sobre Kubernetes
 
-
 1. Introducción a Kubernetes
     * [Implantación de aplicaciones web en contenedores](modulo1/implantacion-aplic-web.md)
     * [Docker](modulo1/docker.md)
@@ -13,9 +12,7 @@ Curso sobre Kubernetes
     * [Alternativas para instalación simple de k8s](modulo2/alternativas.md)
     * [Introducción a la instalación de minikube](modulo2/instalacion-minikube.md)
     * [Instalación de minikube en linux + KVM](modulo2/instalacion-minikube-linux.md)
-    * [Instalación de minikube en Windows + Hyper-V](modulo2/instalacion-minikube-windows.md)
     * [Instalación y configuración de kubectl en linux](modulo2/instalacion-kubectl-linux.md)
-    * [Instalación y configuración de kubectl en windows](modulo2/instalacion-kubectl-windows.md)
     * [Despliegues de aplicaciones en Kubernetes](modulo2/despliegues-k8s.md)
         * [Actividad 2.1: Instalación de minikube y kubectl (OBLIGATORIA)](modulo2/actividad1.md)
 1. Contenedores en Kubernetes: Pods

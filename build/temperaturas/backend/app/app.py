@@ -29,9 +29,9 @@ class FiltrarMunicipios(Resource):
 class DevolverTemperatura(Resource):
     def get(self,codigo):
         try:
-	        response = urlopen("https://www.aemet.es/xml/municipios/localidad_"+codigo+".xml")
+            response = urlopen("https://www.aemet.es/xml/municipios/localidad_"+codigo+".xml")
             txt=response.read()
-	        #doc=etree.parse(response.read())
+            #doc=etree.parse(response.read())
         except:
             return({"error":"No puedo hacer la petición"})
         #name=doc.find("nombre").text

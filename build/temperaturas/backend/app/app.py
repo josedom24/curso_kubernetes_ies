@@ -2,6 +2,7 @@ from flask import Flask, request
 from flask_restful import Resource, Api,reqparse
 import json,os
 from lxml import etree
+from urllib.request import urlopen
 app = Flask(__name__)
 api = Api(app)
 
@@ -28,7 +29,8 @@ class FiltrarMunicipios(Resource):
 class DevolverTemperatura(Resource):
     def get(self,codigo):
         try:
-	        doc=etree.parse("https://www.aemet.es/xml/municipios/localidad_"+codigo+".xml")
+	        response = urlopen("https://www.aemet.es/xml/municipios/localidad_"+codigo+".xml")
+	        doc=etree.parse(response.read())
         except:
             return({"error":"No puedo hacer la petición"})
         name=doc.find("nombre").text

@@ -36,9 +36,9 @@ class DevolverTemperatura(Resource):
         #name=doc.find("nombre").text
         #max=doc.find("prediccion/dia/temperatura").find("maxima").text
         #min=doc.find("prediccion/dia/temperatura").find("minima").text
-	name=str(txt)[str(txt).find("<nombre>")+len("<nombre>"):str(txt).find("</nombre>")]
-	max=str(txt)[str(txt).find("<maxima>")+len("<maxima>"):str(txt).find("</maxima>")]
-	min=str(txt)[str(txt).find("<minima>")+len("<minima>"):str(txt).find("</minima>")]
+        name=str(txt)[str(txt).find("<nombre>")+len("<nombre>"):str(txt).find("</nombre>")]
+        max=str(txt)[str(txt).find("<maxima>")+len("<maxima>"):str(txt).find("</maxima>")]
+        min=str(txt)[str(txt).find("<minima>")+len("<minima>"):str(txt).find("</minima>")]
 
         return {"NOMBRE":name,"TMAX":max,"TMIN":min}
 

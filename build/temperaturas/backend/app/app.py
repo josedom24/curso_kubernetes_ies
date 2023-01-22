@@ -28,7 +28,7 @@ class FiltrarMunicipios(Resource):
 class DevolverTemperatura(Resource):
     def get(self,codigo):
         try:
-	        doc=etree.parse("http://www.aemet.es/xml/municipios/localidad_"+codigo+".xml")
+	        doc=etree.parse("https://www.aemet.es/xml/municipios/localidad_"+codigo+".xml")
         except:
             return({"error":"No puedo hacer la petición"})
         name=doc.find("nombre").text

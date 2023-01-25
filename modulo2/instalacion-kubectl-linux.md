@@ -3,7 +3,7 @@
 **kubectl** es la herramienta de línea de comandos utilizada para
 interactuar con la API de Kubernetes. Es por tanto la herramienta
 fundamental que vamos a utilizar durante todo el curso para gestionar
-nuestros objetos en el cluster recién creado con minikube.
+nuestros objetos en el clúster recién creado con minikube.
 
 kubectl está escrito en Go y de nuevo su instalación es muy simple, ya
 que se trata de un binario enlazado estáticamente y sin
@@ -71,15 +71,14 @@ versión, con la instrucción:
 
 ```
 kubectl version
-Client Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.3", GitCommit:"816c97ab8cff8a1c72eccca1026f7820e93e0d25", GitTreeState:"clean", BuildDate:"2022-01-25T21:25:17Z", GoVersion:"go1.17.6", Compiler:"gc", Platform:"linux/amd64"}
-The connection to the server localhost:8080 was refused - did you specify the right host or port?
+Client Version: version.Info{Major:"1", Minor:"26", GitVersion:"v1.26.1", GitCommit:"8f94681cd294aa8cfd3407b8191f6c70214973a4", GitTreeState:"clean", BuildDate:"2023-01-18T15:58:16Z", GoVersion:"go1.19.5", Compiler:"gc", Platform:"linux/amd64"}The connection to the server localhost:8080 was refused - did you specify the right host or port?
 ```
 
-En el caso anterior, estamos utilizando la versión 1.22.2 y nos
-informa de que no ha podido conectarse al cluster de Kubernetes con la
+En el caso anterior, estamos utilizando la versión 1.62.1 y nos
+informa de que no ha podido conectarse al clúster de Kubernetes con la
 configuración por defecto (`localhost:8080`). Es decir, aunque
 tengamos kubectl y minikube instalados, el primero no está configurado
-todavía para conectarse al cluster de k8s que ejecuta minikube.
+todavía para conectarse al clúster de k8s que ejecuta minikube.
 
 La solución más sencilla es parar minikube y volverlo a arrancar,
 porque de esta manera minikube configurará automáticamente
@@ -91,7 +90,7 @@ no teníamos instalado `kubectl`, aparecía la línea:
 ```
 
 Pero si lo volvemos a repetir ahora, esa línea no aparecerá y se
-configurará `kubectl` para poder usar el cluster que proporciona
+configurará `kubectl` para poder usar el clúster que proporciona
 minikube. Lo que va a hacer minikube es configurar el fichero
 `~/.kube/config` de la siguiente manera:
 
@@ -130,7 +129,7 @@ users:
     client-key: /home/alberto/.minikube/profiles/minikube/client.key
 ```
 
-Donde en cada caso variará la dirección IP del servidor del cluster
+Donde en cada caso variará la dirección IP del servidor del clúster
 (en este caso la 192.168.39.221) y la ubicación de los ficheros de los
 certificados y claves x509 (en este caso en el directorio
 `/home/alberto`).
@@ -141,19 +140,21 @@ comando:
 ```
 kubectl version
 
-Client Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.3", GitCommit:"816c97ab8cff8a1c72eccca1026f7820e93e0d25", GitTreeState:"clean", BuildDate:"2022-01-25T21:25:17Z", GoVersion:"go1.17.6", Compiler:"gc", Platform:"linux/amd64"}
-Server Version: version.Info{Major:"1", Minor:"22", GitVersion:"v1.22.3", GitCommit:"c92036820499fedefec0f847e2054d824aea6cd1", GitTreeState:"clean", BuildDate:"2021-10-27T18:35:25Z", GoVersion:"go1.16.9", Compiler:"gc", Platform:"linux/amd64"}
+Client Version: version.Info{Major:"1", Minor:"26", GitVersion:"v1.26.1", GitCommit:"8f94681cd294aa8cfd3407b8191f6c70214973a4", GitTreeState:"clean", BuildDate:"2023-01-18T15:58:16Z", GoVersion:"go1.19.5", Compiler:"gc", Platform:"linux/amd64"}
+Kustomize Version: v4.5.7
+Server Version: version.Info{Major:"1", Minor:"25", GitVersion:"v1.25.3", GitCommit:"434bfd82814af038ad94d62ebe59b133fcb50506", GitTreeState:"clean", BuildDate:"2022-10-12T10:49:09Z", GoVersion:"go1.19.2", Compiler:"gc", Platform:"linux/amd64"}
+
 ```
 
 Comprobamos que ya aparece la versión del servidor y por
-tanto se ha podido conectar con el cluster que gestiona
+tanto se ha podido conectar con el clúster que gestiona
 minikube. Además podemos ejecutar nuestro primer comando propiamente
 de `kubectl`:
 
 ```
 kubectl get nodes
 NAME       STATUS   ROLES                  AGE   VERSION
-minikube   Ready    control-plane,master   21m   v1.22.3
+minikube   Ready    control-plane,master   21m   v1.25.3
 ```
 
 Si queremos utilizar el autocompletado, podemos generarlo e
@@ -164,7 +165,7 @@ echo 'source <(kubectl completion bash)' >>~/.bashrc
 ```
 
 Y para poder usarlo en esta misma sesión (no será necesario más
-adelante, ya que el fichero .bashrc se lee cada vez que se inicia una
+adelante, ya que el fichero `.bashrc` se lee cada vez que se inicia una
 sesión):
 
 ```

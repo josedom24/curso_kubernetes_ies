@@ -21,7 +21,7 @@ Se distingue entre dos tipos de nodos:
 * Los nodos *master*: Son los que ejecutan los servicios principales
 de k8s y ordenan a los otros nodos los contenedores que deben
 ejecutar. Como el uso del término master es últimamente muy
-controvertido en los paises de habla inglesa, se está cambiando su
+controvertido en los países de habla inglesa, se está cambiando su
 denominación por *control plane* node.
 * Los nodos *worker*: Son los que reciben las órdenes de los
 controladores y en los que se ejecutan los contenedores de las
@@ -66,7 +66,7 @@ centralizada. Múltiples opciones: [prometheus](https://prometheus.io/), [sysdig
 
 ## Esquema de nodos y componentes
 
-Se crea un cluster de k8s en los que algunos nodos actúan como master
+Se crea un clúster de k8s en los que algunos nodos actúan como master
 (normalmente se crea un conjunto impar de nodos master que
 proporcionen alta disponibilidad) y el resto actúa como worker en los
 que se ejecutan los contenedores de las aplicaciones. Los nodos se

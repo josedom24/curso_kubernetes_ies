@@ -30,9 +30,7 @@ Curso sobre Kubernetes
     * [Describiendo un Deployment](modulo5/describiendo_deployment.md)
     * [Gestión básica de un Deployment](modulo5/gestionando_deployment.md)
     * [Actualización y desactualización de un Deployment](modulo5/actualizacion_deployment.md)
-        * [Actividad 5.1: Trabajando con Deployments (OBLIGATORIA)](modulo5/actividad1.md)
-        * [Actividad 5.2: Actualización y desactualización de nuestra aplicación (OBLIGATORIA)](modulo5/actividad2.md)
-        * [Actividad 5.3: Despliegue de la aplicación GuestBook (OBLIGATORIA)](modulo5/actividad3.md)
+
 1. Acceso a las aplicaciones
     * [Services. Tipos de Services](modulo6/services.md)
     * [Describiendo Services](modulo6/describiendo_services.md)
@@ -40,15 +38,13 @@ Curso sobre Kubernetes
     * [Servicio DNS en Kubernetes](modulo6/dns.md)
     * [Ingress Controller](modulo6/ingress.md)
     * [Ejemplo completo: Desplegando y accediendo a la aplicación Temperaturas](modulo6/temperaturas.md)
-        * [Actividad 6.1: Acceso de la aplicación GuestBook (OBLIGATORIA)](modulo6/actividad1.md)
-        * [Actividad 6.2: Despliegue y acceso de la Aplicación Lets-Chat (VOLUNTARIA)](modulo6/actividad2.md)
+
 1. Despliegues parametrizados
     * [Variables de entorno](modulo7/variables_entorno.md)
 	* [ConfigMaps](modulo7/configmaps.md)
 	* [Secrets](modulo7/secrets.md)
     * [Ejemplo completo: Despliegue y acceso a Wordpress + MariaDB](modulo7/wordpress.md)
-        * [Actividad 7.1: Configurando nuestra aplicación Temperaturas (OBLIGATORIA)](modulo7/actividad1.md)
-        * [Actividad 7.2: Despliegue y acceso de la aplicación Nextcloud (VOLUNTARIA)](modulo7/actividad2.md)
+
 1. Almacenamiento en Kubernetes
     * [Consideraciones sobre el almacenamiento](modulo8/consideraciones.md)
     * [Volúmenes en Kubernetes](modulo8/volumenes.md)
@@ -58,19 +54,15 @@ Curso sobre Kubernetes
     * [Ejemplo 1: Gestión estática de volúmenes](modulo8/ejemplo1.md)
     * [Ejemplo 2: Gestión dinámica de volúmenes](modulo8/ejemplo2.md)
     * [Ejemplo 3: Wordpress con almacenamiento persistente](modulo8/wordpress.md)
-        * [Actividad 8.1: Desplegando un servidor web persistente (OBLIGATORIA)](modulo8/actividad1.md)
-        * [Actividad 8.2: Haciendo persistente la aplicación GuestBook (OBLIGATORIA)](modulo8/actividad2.md)
-        * [Actividad 8.3: Haciendo persistente la aplicación Nextcloud (VOLUNTARIA)](modulo8/actividad3.md)
+
 1. Otras cargas de trabajo
     * [¿Podemos usar un despliegue para todo?](modulo9/otras_cargas.md)
     * [StatefulSets](modulo9/statefulsets.md)
 	* [Ejemplo: Despliegue de un cluster de MySQL](modulo9/ejemplo2.md)
 	* [DaemonSets](modulo9/daemonsets.md)
 	* [Jobs y CronJobs](modulo9/jobs.md)
-        * [Actividad 9.1: Creando un cluster de MySQL (VOLUNTARIA)](modulo9/actividad1.md)
+
 1. Instalación de aplicaciones en Kubernetes con Helm
     * [Despliegue de aplicaciones con Helm](modulo10/helm.md   )
     * [Instalación de Helm](modulo10/instalacion.md)
     * [Gestión de charts y despliegue de aplicaciones](modulo10/ejemplo.md)
-        * [Actividad 10.1: Instalación de un CMS con Helm (OBLIGATORIA)](modulo10/actividad1.md)
-

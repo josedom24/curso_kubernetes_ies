@@ -161,7 +161,10 @@ Si queremos utilizar el autocompletado, podemos generarlo e
 incorporarlo a nuestro entorno con:
 
 ```
-echo 'source <(kubectl completion bash)' >>~/.bashrc
+echo 'source <(kubectl completion bash)' >> ~/.bashrc
+
+# Para los usuarios de zsh:
+echo '[[ "$commands[kubectl]" ]] && source <(kubectl completion zsh)' >> ~/.zshrc
 ```
 
 Y para poder usarlo en esta misma sesión (no será necesario más
@@ -170,6 +173,9 @@ sesión):
 
 ```
 source ~/.bashrc
+
+# Para los usuarios de zsh:
+source ~/.zshrc
 ```
 
 ## Vídeo

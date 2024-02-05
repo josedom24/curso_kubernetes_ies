@@ -71,10 +71,12 @@ versión, con la instrucción:
 
 ```
 kubectl version
-Client Version: version.Info{Major:"1", Minor:"26", GitVersion:"v1.26.1", GitCommit:"8f94681cd294aa8cfd3407b8191f6c70214973a4", GitTreeState:"clean", BuildDate:"2023-01-18T15:58:16Z", GoVersion:"go1.19.5", Compiler:"gc", Platform:"linux/amd64"}The connection to the server localhost:8080 was refused - did you specify the right host or port?
+Client Version: v1.29.0
+...
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
 ```
 
-En el caso anterior, estamos utilizando la versión 1.62.1 y nos
+En el caso anterior, estamos nos muestra la versión y nos
 informa de que no ha podido conectarse al clúster de Kubernetes con la
 configuración por defecto (`localhost:8080`). Es decir, aunque
 tengamos kubectl y minikube instalados, el primero no está configurado
@@ -98,7 +100,7 @@ minikube. Lo que va a hacer minikube es configurar el fichero
 apiVersion: v1
 clusters:
 - cluster:
-    certificate-authority: /home/alberto/.minikube/ca.crt
+    certificate-authority: /home/usuario/.minikube/ca.crt
     extensions:
     - extension:
         last-update: Sun, 30 Jan 2022 20:45:08 CET
@@ -125,14 +127,14 @@ preferences: {}
 users:
 - name: minikube
   user:
-    client-certificate: /home/alberto/.minikube/profiles/minikube/client.crt
-    client-key: /home/alberto/.minikube/profiles/minikube/client.key
+    client-certificate: /home/usuario/.minikube/profiles/minikube/client.crt
+    client-key: /home/usuario/.minikube/profiles/minikube/client.key
 ```
 
 Donde en cada caso variará la dirección IP del servidor del clúster
 (en este caso la 192.168.39.221) y la ubicación de los ficheros de los
 certificados y claves x509 (en este caso en el directorio
-`/home/alberto`).
+`/home/usuario`).
 
 Una vez configurado correctamente `kubectl`, podemos repetir el
 comando:
@@ -140,10 +142,8 @@ comando:
 ```
 kubectl version
 
-Client Version: version.Info{Major:"1", Minor:"26", GitVersion:"v1.26.1", GitCommit:"8f94681cd294aa8cfd3407b8191f6c70214973a4", GitTreeState:"clean", BuildDate:"2023-01-18T15:58:16Z", GoVersion:"go1.19.5", Compiler:"gc", Platform:"linux/amd64"}
-Kustomize Version: v4.5.7
-Server Version: version.Info{Major:"1", Minor:"25", GitVersion:"v1.25.3", GitCommit:"434bfd82814af038ad94d62ebe59b133fcb50506", GitTreeState:"clean", BuildDate:"2022-10-12T10:49:09Z", GoVersion:"go1.19.2", Compiler:"gc", Platform:"linux/amd64"}
-
+Client Version: v1.29.0
+Server Version: v1.28.3
 ```
 
 Comprobamos que ya aparece la versión del servidor y por
@@ -154,7 +154,7 @@ de `kubectl`:
 ```
 kubectl get nodes
 NAME       STATUS   ROLES                  AGE   VERSION
-minikube   Ready    control-plane,master   21m   v1.25.3
+minikube   Ready    control-plane,master   21m   v1.32.0
 ```
 
 Si queremos utilizar el autocompletado, podemos generarlo e

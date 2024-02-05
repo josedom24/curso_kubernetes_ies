@@ -28,8 +28,7 @@ Comprobamos que se ha instalado correctamente con:
 
     minikube version
 
-    minikube version: v1.28.0
-	commit: 986b1ebd987211ed16f8cc10aed7d2c42fc8392f
+    minikube version: v1.32.0
 
 ## Creación del clúster de k8s
 
@@ -57,18 +56,8 @@ de k8s) para que utilice el cluster recién instalado. Podemos ver una
 salida típica de la instalación del cluster a continuación:
 
 ```
-😄  minikube v1.28.0 en Debian 11.6
-✨  Using the kvm2 driver based on user configuration
-👍  Starting control plane node minikube in cluster minikube
-🔥  Creando kvm2 VM (CPUs=2, Memory=3900MB, Disk=20000MB) ...
-🐳  Preparando Kubernetes v1.25.3 en Docker 20.10.8...
-    ▪ Generating certificates and keys ...
-    ▪ Booting up control plane ...
-    ▪ Configuring RBAC rules ...
-🔎  Verifying Kubernetes components...
-    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
-🌟  Complementos habilitados: default-storageclass, storage-provisioner
-💡  kubectl not found. If you need it, try: 'minikube kubectl -- get pods -A'
+😄  minikube v1.32.0 en Debian...
+...
 🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
 ```
 
@@ -103,7 +92,7 @@ minikube stop
 
 ```
 minikube start
-😄  minikube v1.28.0 en Debian 11.6
+😄  minikube v1.32.0 en Debian...
 ...
 ```
 

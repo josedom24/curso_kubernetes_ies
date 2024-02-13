@@ -71,8 +71,9 @@ A continuación queremos desplegar una versión más reciente de la mediawiki. P
 
 Al ejecutar la actualización del Deployment podemos observar que se ha creado un nuevo ReplicaSet, que creará los nuevos Pods a partir de la versión modificada de la imagen. ¿Cómo se crean los nuevos Pods y se destruyen los antiguos? Dependerá de la estrategia de despliegue:
 
-  * Por defecto la estrategia de despliegue es `Recreate` que elimina los Pods antiguos y crea los nuevos.
-  * Si indicamos en el despliegue el tipo de estrategia  `RollingUpdate`, se van creando los nuevos Pods, se comprueba que funcionan y se eliminan los antiguos.
+  * Por defecto la estrategia de despliegue es `RollingUpdate`, se van creando los nuevos Pods, se comprueba que funcionan y se eliminan los antiguos.
+  *  
+  * Si indicamos en el despliegue el tipo de estrategia  `Recreate`, se eliminan los Pods antiguos y se crean los nuevos.
 
 A continuación indicamos el motivo del cambio del despliegue con una anotación:
 

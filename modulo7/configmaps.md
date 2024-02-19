@@ -57,22 +57,22 @@ y el fragmento donde definimos las variables de entorno quedaría:
             - containerPort: 3306
               name: db-port
           env:
-            - name: MYSQL_ROOT_PASSWORD
+            - name: MARIADB_ROOT_PASSWORD
               valueFrom:
                 configMapKeyRef:
                   name: mariadb
                   key: root_password
-            - name: MYSQL_USER
+            - name: MARIADB_USER
               valueFrom:
                 configMapKeyRef:
                   name: mariadb
                   key: mysql_usuario
-            - name: MYSQL_PASSWORD
+            - name: MARIADB_PASSWORD
               valueFrom:
                 configMapKeyRef:
                   name: mariadb
                   key: mysql_password
-            - name: MYSQL_DATABASE
+            - name: MARIADB_DATABASE
               valueFrom:
                 configMapKeyRef:
                   name: mariadb

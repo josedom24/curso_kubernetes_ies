@@ -233,7 +233,7 @@ spec:
       - name: mysql
         image: mysql:5.7
         env:
-        - name: MYSQL_ALLOW_EMPTY_PASSWORD
+        - name: MARIADB_ALLOW_EMPTY_PASSWORD
           value: "1"
         ports:
         - name: mysql

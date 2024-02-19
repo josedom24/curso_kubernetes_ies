@@ -24,22 +24,22 @@ spec:
             - containerPort: 3306
               name: db-port
           env:
-            - name: MYSQL_USER
+            - name: MMARIADB_USER
               valueFrom:
                 configMapKeyRef:
                   name: bd-datos
                   key: bd_user
-            - name: MYSQL_DATABASE
+            - name: MARIADB_DATABASE
               valueFrom:
                 configMapKeyRef:
                   name: bd-datos
                   key: bd_dbname
-            - name: MYSQL_PASSWORD
+            - name: MARIADB_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: bd-passwords
                   key: bd_password
-            - name: MYSQL_ROOT_PASSWORD
+            - name: MMARIADB_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: bd-passwords

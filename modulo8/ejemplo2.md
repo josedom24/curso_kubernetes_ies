@@ -61,7 +61,7 @@ Source:
 
 A partir de este punto el ejercicio es muy parecido al que vimos en el ejemplo1. 
 
-Creamos el Deployment usando el fichero [`deploy-ejemplo2.yaml`](files/ejemplo1/deploy-ejemplo2.yaml):
+Creamos el Deployment usando el fichero [`deploy-ejemplo2.yaml`](files/ejemplo2/deploy-ejemplo2.yaml):
 
 ```yaml
 apiVersion: apps/v1

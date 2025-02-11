@@ -71,7 +71,7 @@ versión, con la instrucción:
 
 ```
 kubectl version
-Client Version: v1.29.0
+Client Version: v1.31.0
 ...
 The connection to the server localhost:8080 was refused - did you specify the right host or port?
 ```

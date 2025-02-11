@@ -28,7 +28,7 @@ Comprobamos que se ha instalado correctamente con:
 
     minikube version
 
-    minikube version: v1.32.0
+    minikube version: v1.35.0
 
 ## Creación del clúster de k8s
 

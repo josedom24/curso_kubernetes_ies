@@ -142,8 +142,9 @@ comando:
 ```
 kubectl version
 
-Client Version: v1.29.0
-Server Version: v1.28.3
+Client Version: v1.31.0
+Kustomize Version: v5.4.2
+Server Version: v1.32.0
 ```
 
 Comprobamos que ya aparece la versión del servidor y por

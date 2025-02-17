@@ -24,7 +24,7 @@ spec:
             - containerPort: 3306
               name: db-port
           env:
-            - name: MMARIADB_USER
+            - name: MARIADB_USER
               valueFrom:
                 configMapKeyRef:
                   name: bd-datos
@@ -39,7 +39,7 @@ spec:
                 secretKeyRef:
                   name: bd-passwords
                   key: bd_password
-            - name: MMARIADB_ROOT_PASSWORD
+            - name: MARIADB_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: bd-passwords
